@@ -42,17 +42,17 @@ The `->withPlaceholderCount()` method lets you show the item number when adding 
 The `->logUsers()` method allows you to save which user created or completed the task/item. You specify which column on the User model you want to save on task, it default to use the "name" column.
 
 
-![Checklist-form-page](form-add.png)
+![Checklist-form-page](https://raw.githubusercontent.com/e2-consult/novachecklists/master/form-add.png)
 
 You can edit an existing item by clicking on it.
 
-![Checklist-form-page](form-edit.png)
+![Checklist-form-page](https://raw.githubusercontent.com/e2-consult/novachecklists/master/form-edit.png)
 
 ### Detail-page
 
 The `->showTimestamps()` method lets you show how long ago a task was completed.
 
-![Checklist-detail-page](detail.png)
+![Checklist-detail-page](https://raw.githubusercontent.com/e2-consult/novachecklists/master/detail.png)
 
 ### Index-page
 By default this package will only show the task count on the index page.
@@ -61,7 +61,19 @@ The `->showItemStatusOnIndex()` will change the index to show how many tasks are
 
 The `->showCompletionOnIndex()` method will let you show how many percent of the tasks are completed.
 
-![Checklist-detail-page](index.png)
+![Checklist-detail-page](https://raw.githubusercontent.com/e2-consult/novachecklists/master/index.png)
+
+```php
+use E2Consult\NovaChecklist\Checklist;
+
+Checklist::make('Tasks')
+    ->placeholder('Add task ')
+    ->withPlaceholderCount()
+    ->logUsers()
+    ->showTimestamps()
+    ->showItemStatusOnIndex()
+    ->showCompletionOnIndex(),
+```
 
 ## License
 
