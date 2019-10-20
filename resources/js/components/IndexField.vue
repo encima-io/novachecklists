@@ -14,7 +14,7 @@ export default {
         },
         indexText(){
           if(this.field.show_item_status && this.field.show_completion){
-            return this.itemStatus + ' - ' + completion;
+            return this.itemStatus + ' - ' + this.completion;
           }
           if(this.field.show_item_status){
             return this.itemStatus;
