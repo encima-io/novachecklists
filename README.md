@@ -24,12 +24,12 @@ composer require e2consult/novachecklists
 use E2Consult\NovaChecklist\Checklist;
 
 Checklist::make('Tasks')
-    ->placeholder('Add another task')
-    ->withPlaceholderCount()
-    ->logUsers()
-    ->showTimestamps()
-    ->showItemStatusOnIndex()
-    ->showCompletionOnIndex(),
+    ->placeholder('Add another task')   // Defaults to "Add item"
+    ->withPlaceholderCount()            // Not active by default
+    ->logUsers()                        // Not active by default, accepts user-model column. Uses "name" when column isn't provided.
+    ->showTimestamps()                  // Not active by default
+    ->showItemStatusOnIndex()           // Not active by default
+    ->showCompletionOnIndex(),          // Not active by default
 ```
 
 To use this package you'll need a text or JSON column on you model to save the items/tasks, as they are persisted as json on your model.
