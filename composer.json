@@ -1,0 +1,41 @@
+{
+    "name": "e2consult/novachecklists",
+    "description": "A Laravel Nova field to display a list of items to complete.",
+    "keywords": [
+        "laravel",
+        "nova",
+        "input",
+        "field",
+        "checkbox",
+        "checkboxes",
+        "checklist",
+        "checklists"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Einar-Johan Hansen",
+            "email": "einar@e2consult.no"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "E2Consult\\NovaChecklist\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "E2Consult\\NovaChecklist\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
